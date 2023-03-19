@@ -1,0 +1,21 @@
+---
+version: "3"
+services:
+  paytm:
+    image: paytm:v1
+    ports:
+      - 8000:80
+    volumes:
+      - paytmvolume
+  ptrain:
+    image: ptrain:v1
+    ports:
+      - 8001:80
+    volumes:
+      - paytmtrain
+  pmovies:
+    image: pmovies:v1
+    ports:
+      - 8002:80
+    volumes:
+      - paytmmovies
